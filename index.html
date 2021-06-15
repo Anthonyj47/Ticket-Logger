@@ -18,7 +18,8 @@
         <form action="">
             <div class="create-item">
                 <label for="ticket_no">Ticket Number</label>
-                <input type="number" id="ticket_no" placeholder="Ticket Number">
+                <input type="number" id="ticket_no" max="20000000" min="10000000" placeholder="Ticket Number">
+
             </div>
             <div class="create-item">
                 <label for="call_driver">Call Driver</label>
@@ -66,6 +67,28 @@
             </div>
         </form>
     </header>
+    <table class="ticket_grid">
+        <tr>
+            <td>No. 1</td>
+            <td>Ticket Number</td>
+            <td>Call Driver</td>
+            <td>Store</td>
+            <td>Action</td>
+            <td>Additional Action</td>
+            <td>Outcome</td>
+            <td>date</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>1000015746</td>
+            <td>Quote</td>
+            <td>branch name</td>
+            <td>Email</td>
+            <td>None</td>
+            <td>In Progress</td>
+            <td></td>
+        </tr>
+    </table>
 </body>
 <script src="js/main.js"></script>
 
