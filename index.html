@@ -15,16 +15,17 @@
     <div class="top_bar">
         <h1>workload</h1>
     </div>
-    <header>
-        <form action="">
-            <div class="create-item">
-                <label for="ticket_no">Ticket Number</label>
-                <input type="number" id="ticket_no" max="20000000" min="10000000" placeholder="Ticket Number">
+    <div id="app">
+        <header>
+            <form action="">
+                <div class="create-item">
+                    <label for="ticket_no">Ticket Number</label>
+                    <input type="number" id="ticket_no" max="20000000" min="10000000" placeholder="Ticket Number">
 
-            </div>
-            <div class="create-item">
-                <label for="call_driver">Call Driver</label>
-                <select id="call_driver">
+                </div>
+                <div class="create-item">
+                    <label for="call_driver">Call Driver</label>
+                    <select id="call_driver">
                 <option disabled selected>Call Driver</option>
                 <option value="quote">Quote</option>
                 <option value="online">Online/Website</option>
@@ -32,64 +33,69 @@
                 <option value="product">Product</option>
                 <option value="complaint">Complaint</option>
             </select>
-            </div>
-            <div class="create-item">
-                <label for="store">Store</label>
-                <textarea style="resize: none;" id="store" cols="20" rows="1" placeholder="Enter Branch..."></textarea>
-            </div>
-            <div class="create-item">
-                <label for="action">Action</label>
-                <select name="" id="action">
+                </div>
+                <div class="create-item">
+                    <label for="store">Store</label>
+                    <textarea style="resize: none;" id="store" cols="20" rows="1" placeholder="Enter Branch..."></textarea>
+                </div>
+                <div class="create-item">
+                    <label for="action">Action</label>
+                    <select name="" id="action">
                 <option disabled selected>Select Action...</option>
                 <option value="call">Call</option>
                 <option value="email">Email</option>
             </select>
-            </div>
-            <div class="create-item">
-                <label for="add-action">Additional Action</label>
-                <select id="add-action">
+                </div>
+                <div class="create-item">
+                    <label for="add-action">Additional Action</label>
+                    <select id="add-action">
                 <option value="none">None</option>
                 <option value="follow_up">Follow up</option>
                 <option value="approval">Approval</option>
                 <option value="reassign">Reassign</option>
             </select>
-            </div>
-            <div class="create-item">
-                <label for="outcome">Outcome</label>
-                <select id="outcome">
+                </div>
+                <div class="create-item">
+                    <label for="outcome">Outcome</label>
+                    <select id="outcome">
                 <option disabled selected>Select Outcome...</option>
                 <option value="resolved">Resolved</option>
                 <option value="in_progress">In Progress</option>
                 <option value="escalate">Escalate</option>
             </select>
-            </div>
-            <div class="create-item">
-                <input type="button" class="button" value="Log New Ticket" onclick="grid()">
-            </div>
-        </form>
-    </header>
-    <table class="ticket_grid">
-        <tr>
-            <td class="delete">Delete</td>
-            <td>Ticket Number</td>
-            <td>Call Driver</td>
-            <td>Store</td>
-            <td>Action</td>
-            <td>Additional Action</td>
-            <td>Outcome</td>
-            <td>date</td>
-        </tr>
-        <tr>
-            <td>No. 1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td id="time"></td>
-        </tr>
-    </table>
+                </div>
+                <div class="create-item">
+                    <input @click="count++" type="button" class="button" value="Log New Ticket" onclick="grid()">
+                </div>
+            </form>
+        </header>
+        <p class="counter">Ticket count: <span>{{count}}</span></p>
+        <!-- <table class="ticket_grid">
+            <tr>
+                <td class="delete">Delete</td>
+                <td>Ticket Number</td>
+                <td>Call Driver</td>
+                <td>Store</td>
+                <td>Action</td>
+                <td>Additional Action</td>
+                <td>Outcome</td>
+                <td>date</td>
+            </tr>
+            <tr>
+                <td>No. 1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="time"></td>
+            </tr>
+        </table> -->
+    </div>
+    <template>
+        <div></div>
+    </template>
 </body>
 <script src="js/main.js"></script>
 
