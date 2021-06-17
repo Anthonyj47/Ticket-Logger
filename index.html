@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/vue.min.js"></script>
     <title>Workload</title>
 </head>
 
@@ -63,13 +64,13 @@
             </select>
             </div>
             <div class="create-item">
-                <button type="submit">Log New Ticket</button>
+                <input type="button" class="button" value="Log New Ticket" onclick="grid()">
             </div>
         </form>
     </header>
     <table class="ticket_grid">
         <tr>
-            <td>No. 1</td>
+            <td class="delete">Delete</td>
             <td>Ticket Number</td>
             <td>Call Driver</td>
             <td>Store</td>
@@ -79,14 +80,14 @@
             <td>date</td>
         </tr>
         <tr>
+            <td>No. 1</td>
             <td></td>
-            <td>1000015746</td>
-            <td>Quote</td>
-            <td>branch name</td>
-            <td>Email</td>
-            <td>None</td>
-            <td>In Progress</td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="time"></td>
         </tr>
     </table>
 </body>
