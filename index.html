@@ -65,12 +65,14 @@
             </select>
                 </div>
                 <div class="create-item">
-                    <input @click="count++" type="button" class="button" value="Log New Ticket" onclick="grid()">
+                    <input onclick="create()" type="button" class="button" value="Log New Ticket" onclick="grid()">
                 </div>
             </form>
         </header>
-        <p class="counter">Ticket count: <span>{{count}}</span></p>
-        <ticket></ticket>
+        <p class="counter">Ticket count: <span>0</span></p>
+        <div class="ticket_board">
+            <h1>yeet</h1>
+        </div>
     </div>
     <template>
         <div class="ticket">
@@ -100,5 +102,5 @@
     </template>
 </body>
 <script src="js/main.js"></script>
-
+<script src="js/rendering.js"></script>
 </html>
