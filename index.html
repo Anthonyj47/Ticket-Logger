@@ -20,12 +20,12 @@
             <form action="">
                 <div class="create-item">
                     <label for="ticket_no">Ticket Number</label>
-                    <input type="number" id="ticket_no" max="20000000" min="10000000" placeholder="Ticket Number">
+                    <input v-model="ticket_num" type="number" id="ticket_no" max="50000000" min="10000000" placeholder="Ticket Number" required>
 
                 </div>
                 <div class="create-item">
                     <label for="call_driver">Call Driver</label>
-                    <select id="call_driver">
+                    <select v-model="call_driver" id="call_drive r" required>
                 <option disabled selected>Call Driver</option>
                 <option value="quote">Quote</option>
                 <option value="online">Online/Website</option>
@@ -36,11 +36,11 @@
                 </div>
                 <div class="create-item">
                     <label for="store">Store</label>
-                    <textarea style="resize: none;" id="store" cols="20" rows="1" placeholder="Enter Branch..."></textarea>
+                    <textarea v-model="store" style="resize: none;" id="store" cols="20" rows="1" placeholder="Enter Branch..."></textarea required>
                 </div>
                 <div class="create-item">
                     <label for="action">Action</label>
-                    <select name="" id="action">
+                    <select v-model="action" name="" id="action" required>
                 <option disabled selected>Select Action...</option>
                 <option value="call">Call</option>
                 <option value="email">Email</option>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="create-item">
                     <label for="add-action">Additional Action</label>
-                    <select id="add-action">
+                    <select v-model="add_action" id="add-action" required>
                 <option value="none">None</option>
                 <option value="follow_up">Follow up</option>
                 <option value="approval">Approval</option>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="create-item">
                     <label for="outcome">Outcome</label>
-                    <select id="outcome">
+                    <select v-model="outcome" id="outcome" required>
                 <option disabled selected>Select Outcome...</option>
                 <option value="resolved">Resolved</option>
                 <option value="in_progress">In Progress</option>
@@ -70,31 +70,33 @@
             </form>
         </header>
         <p class="counter">Ticket count: <span>{{count}}</span></p>
-        <!-- <table class="ticket_grid">
-            <tr>
-                <td class="delete">Delete</td>
-                <td>Ticket Number</td>
-                <td>Call Driver</td>
-                <td>Store</td>
-                <td>Action</td>
-                <td>Additional Action</td>
-                <td>Outcome</td>
-                <td>date</td>
-            </tr>
-            <tr>
-                <td>No. 1</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td id="time"></td>
-            </tr>
-        </table> -->
+        <ticket></ticket>
     </div>
     <template>
-        <div></div>
+        <div class="ticket">
+            <table class="ticket_grid">
+                <tr>
+                    <td>Ticket Number</td>
+                    <td>Call Driver</td>
+                    <td>Store</td>
+                    <td>Action</td>
+                    <td>Additional Action</td>
+                    <td>Outcome</td>
+                    <td>date</td>
+                    <td class="delete">Delete</td>
+                </tr>
+                <tr>
+                    <td>{{ticket_num}}</td>
+                    <td>{{call_driver}}</td>
+                    <td>{{store}}</td>
+                    <td>{{action}}</td>
+                    <td>{{add_action}}</td>
+                    <td>{{outcome}}</td>
+                    <td id="time"></td>
+                    <td class="edit">edit</td>
+                </tr>
+            </table>
+        </div>
     </template>
 </body>
 <script src="js/main.js"></script>
